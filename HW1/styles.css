@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #702f2f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-page {
+    background-color: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.signup-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.name-group, .passkey, .button-group {
+    display: flex;
+    gap: 30px;
+}
+
+.name-group .form-subgroup,.passkey .form-subgroup,.button-group .form-subgroup {
+    flex: 1;
+}
+
+#registerButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #538cca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#signinButton {
+    width: 100%;
+    padding: 10px;
+    background-color: #5CB85C;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#registerButton:hover {
+    background-color: #538cca;
+}
+
+#signinButton:hover {
+    background-color: #4d934d;
+}
+
+@media screen and (max-width: 798px) {
+    .name-group, .passkey, .button-group  {
+        flex-direction: column;
+    }
+}
+
+#checkboxTerm {
+    margin-bottom: 15px
+}
+
+#tos {
+    color: #007bff
+}
+
+.tos-group {
+    font-size: 12px
+}
+
+#register {
+    background-color: #007bff;
+    color: #fefbfb;
+    padding: 2px 5px;
+    margin: 5px 0px;
+    font-size: 0.8rem;
+}
+
+.agreement-group {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 10px;
+  }
+
+.checkbox-group {
+    width: 30%;
+    min-width: 60px;
+  }
