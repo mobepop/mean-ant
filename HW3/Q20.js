@@ -3,8 +3,15 @@
 Sample character list: "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
  */
 
-function isPerfectNumber(num) {
-
+function stringIDGen(len) {
+    const sample = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const res = [len]
+    for (let i = 0; i < len; ++i) {
+        res[i] = sample.charAt(Math.floor(Math.random() * sample.length))
+    }
+    return res.join('')
 }
 
-console.log("Output: " + isPerfectNumber())
+console.log("Output: " + stringIDGen(5))
+console.log("Output: " + stringIDGen(10))
+console.log("Output: " + stringIDGen(25))
