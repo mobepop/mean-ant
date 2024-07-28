@@ -5,8 +5,17 @@
 
  */
 
-function isPerfectNumber(num) {
+function longestCountryName(countries) {
+   let res = ''
 
+   countries.forEach(name => {
+      res = name.length < res.length? res : name
+   })
+
+   return res
 }
 
-console.log("Output: " + isPerfectNumber())
+console.log("Output: " + longestCountryName(["Australia", "Germany", "United States of America"]))
+console.log("Output: " + longestCountryName(["Canada", "Germany", "Slovenia"]))
+console.log("Output: " + longestCountryName(["Italy", "Brazil", "Canada", "USA"]))
+console.log("Output: " + longestCountryName(["France", "Vietnam", "Australia"]))

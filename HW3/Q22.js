@@ -5,8 +5,11 @@
 
  */
 
-function isPerfectNumber(num) {
-
+function occurenceCount(s, letter) {
+   return s.split('').filter( c => c.toLowerCase() == letter).length
 }
 
-console.log("Output: " + isPerfectNumber())
+console.log("Output: " + occurenceCount('microsoft.com', 'o'))
+console.log("Output: " + occurenceCount('Doctor Von Doom', 'o'))
+console.log("Output: " + occurenceCount('Google', 'o'))
+console.log("Output: " + occurenceCount('Netflix', 'o'))

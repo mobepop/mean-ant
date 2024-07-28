@@ -2,8 +2,16 @@
  * 29. Write a JavaScript function to get the function name.
  */
 
-function isPerfectNumber(num) {
-
+function getFunctionName(func) {
+    return func.name
 }
 
-console.log("Output: " + isPerfectNumber())
+function sayHi() {
+    console.log("Hello World")
+}
+function sayBye() {
+    console.log("Byeeee")
+}
+
+console.log("Output: " + getFunctionName(sayHi))
+console.log("Output: " + getFunctionName(sayBye))

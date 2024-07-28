@@ -5,8 +5,28 @@ In some applications it may be necessary to return all maximal palindromic subst
 
  */
 
-function isPerfectNumber(num) {
-
+function longestPalindromeInSubstring(s) {
+    let n = s.length;
+    let maxLength = 1;
+    let start = 0;
+    for (let i = 0; i < n; i++) {
+        for (let j = i; j < n; j++) {
+            let flag = true;
+            for (let k = 0; k < (j - i + 1) / 2; k++) {
+                if (s[i + k] !== s[j - k]) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag && (j - i + 1) > maxLength) {
+                start = i;
+                maxLength = j - i + 1;
+            }
+        }
+    }
+    let ans = s.substring(start, start + maxLength);
+    return ans;
 }
 
-console.log("Output: " + isPerfectNumber())
+console.log("Output: " + longestPalindromeInSubstring('bananas'))
+console.log("Output: " + longestPalindromeInSubstring('abracadabra'))
