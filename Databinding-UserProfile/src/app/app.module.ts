@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
+import { ColorTilesComponent } from './color-tiles/color-tiles.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    ColorTilesComponent
   ],
   imports: [
     BrowserModule,
