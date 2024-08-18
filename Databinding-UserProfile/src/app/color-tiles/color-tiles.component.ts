@@ -1,10 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-
-interface Paragraph {
-  title: string;
-  body: string;
-  color: string;
-}
+import { Paragraph } from '../models/paragraph';
 
 @Component({
   selector: 'app-color-tiles',
