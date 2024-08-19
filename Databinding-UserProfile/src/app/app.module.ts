@@ -6,12 +6,20 @@ import { AppComponent } from './app.component';
 // import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
 import { ColorTilesComponent } from './color-tiles/color-tiles.component';
+import { TasklistComponent } from './tasklist/tasklist.component';
+import { HoverDirective } from './directives/hover.directive';
+import { OverdueHighlightDirective } from './directives/overdue-highlight.directive';
+import { StatusFilterPipe } from './pipes/status-filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     // UserProfileComponent,
-    ColorTilesComponent
+    ColorTilesComponent,
+    TasklistComponent,
+    HoverDirective,
+    OverdueHighlightDirective,
+    StatusFilterPipe,
   ],
   imports: [
     BrowserModule,
