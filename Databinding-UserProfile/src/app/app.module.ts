@@ -10,6 +10,7 @@ import { TasklistComponent } from './tasklist/tasklist.component';
 import { HoverDirective } from './directives/hover.directive';
 import { OverdueHighlightDirective } from './directives/overdue-highlight.directive';
 import { StatusFilterPipe } from './pipes/status-filter.pipe';
+import { TaskdetailComponent } from './taskdetail/taskdetail.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { StatusFilterPipe } from './pipes/status-filter.pipe';
     HoverDirective,
     OverdueHighlightDirective,
     StatusFilterPipe,
+    TaskdetailComponent,
   ],
   imports: [
     BrowserModule,
