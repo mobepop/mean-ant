@@ -1,18 +1,25 @@
 <p>tasklist works!</p>
 
+<label> TASK MANAGER </label>
+
 <div>
-    <label> TASK MANAGER </label>
 
     <div **ngIf="tasks.length === 0"> Task list is empty </div>
-    <div *ngFor="let task of tasks">
+    <div *ngFor="let task of tasks | statusFilter : 'Incomplete'">
         <div class="task-container" appHover [appOverdueHighlight] = "task.dueDate">
             <h2>{{ task.title }}</h2>
             <p>{{ task.description }}</p>
             <p>Due Date: {{ task.dueDate }}</p>
             <p>Status: {{ task.status }}</p>
             <p>Priority: {{ task.priority }}</p>
-            <button>Edit task</button>
+            <button (click) = "onEdit(task)">Edit task</button>
         </div>
     </div>
 
+    <app-taskdetail
+        *ngIf = "selectedTask"
+        [task] = "selectedTask"
+        (save) = "onUpdate($event)"
+        (cancel) = "onCancel()">
+    </app-taskdetail>
 </div>

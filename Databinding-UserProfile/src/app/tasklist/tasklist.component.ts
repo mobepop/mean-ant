@@ -91,4 +91,21 @@ export class TasklistComponent {
     },
   ];
 
+  selectedTask: Task | null = null;
+
+  onEdit(task: Task) {
+    this.selectedTask = task;
+  }
+
+  onUpdate(updatedTask: Task) {
+    const idx = this.tasks.findIndex(task => task.id === updatedTask.id);
+    if (idx !== -1) {
+      this.tasks[idx] = updatedTask;
+    }
+    this.selectedTask = null;
+  }
+
+  onCancel() {
+    this.selectedTask = null;
+  }
 }
