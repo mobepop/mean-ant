@@ -5,7 +5,7 @@
 
     <div **ngIf="tasks.length === 0"> Task list is empty </div>
     <div *ngFor="let task of tasks">
-        <div class="task-container" [appOverdueHighlight] = "task.dueDate">
+        <div class="task-container" appHover [appOverdueHighlight] = "task.dueDate">
             <h2>{{ task.title }}</h2>
             <p>{{ task.description }}</p>
             <p>Due Date: {{ task.dueDate }}</p>
