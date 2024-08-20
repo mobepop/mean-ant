@@ -3,9 +3,9 @@
 <div>
     <label> TASK MANAGER </label>
 
-    <div **ngIf="tasks.length === 0"> No Task </div>
+    <div **ngIf="tasks.length === 0"> Task list is empty </div>
     <div *ngFor="let task of tasks">
-        <div class="task-container">
+        <div class="task-container" [appOverdueHighlight] = "task.dueDate">
             <h2>{{ task.title }}</h2>
             <p>{{ task.description }}</p>
             <p>Due Date: {{ task.dueDate }}</p>

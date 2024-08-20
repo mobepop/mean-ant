@@ -1,10 +1,18 @@
-import { Directive } from '@angular/core';
+import { Directive, OnInit, Input, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appOverdueHighlight]'
 })
 export class OverdueHighlightDirective {
+  @Input() appOverdueHighlight! : Date;
 
-  constructor() { }
+  constructor(private ele:ElementRef) { }
+
+  ngOnInit(): void {
+    const today = new Date();
+    if ((this.appOverdueHighlight) < today) {
+      this.ele.nativeElement.style.backgroundColor = 'rgba(255,0,0,0.1)';
+    }
+  }
 
 }
